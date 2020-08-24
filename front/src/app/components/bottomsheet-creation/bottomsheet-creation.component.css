@@ -1,0 +1,21 @@
+
+.sheet-containter{
+  height: 15vh;
+}
+
+@media screen and (max-device-height: 1000px) {
+  .sheet-containter{
+    height: 50vh;
+  }
+}
+.element{
+  border: 1px solid rgba(105, 105, 105, 0.5);
+  border-radius: 15px;
+  /*z-index: 100;*/
+  margin: 1%;
+  width: 100%;
+}
+.element:hover{
+  cursor: pointer;
+  background-color: #757575;
+}

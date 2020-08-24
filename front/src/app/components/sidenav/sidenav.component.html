@@ -1,0 +1,46 @@
+<mat-list style="width: 300px">
+  <mat-list-item>
+    <button mat-button (click)="this.toggleSidenav()">
+      <mat-icon>clear</mat-icon>
+    </button>
+  </mat-list-item>
+  <mat-hint></mat-hint>
+  <mat-list-item>
+    <button mat-button routerLink="/app" (click)="toggleSidenav()">
+      <mat-icon>perm_media</mat-icon>
+      <span>&nbsp;</span>
+      <span>Медиатека</span>
+    </button>
+  </mat-list-item>
+  <mat-list-item>
+    <button mat-button routerLink="/todos" (click)="this.toggleSidenav()">
+      <mat-icon>list_alt</mat-icon>
+      <span>&nbsp;</span>
+      <span>Задачи</span>
+    </button>
+  </mat-list-item>
+  <mat-list-item>
+    <button mat-button routerLink="/calendar" (click)="this.toggleSidenav()">
+      <mat-icon>calendar_today</mat-icon>
+      <span>&nbsp;</span>
+      <span>Календарь</span>
+    </button>
+  </mat-list-item>
+<!--  <mat-list-item>-->
+<!--    <button mat-button routerLink="/profile" (click)="this.toggleSidenav()">-->
+<!--      <mat-icon>perm_contact_calendar</mat-icon>-->
+<!--      <span>&nbsp;</span>-->
+<!--      <span>Мой профиль</span>-->
+<!--    </button>-->
+<!--  </mat-list-item>-->
+<!--  <mat-list-item>-->
+<!--&lt;!&ndash;    <button mat-button (click)="this.logout()">&ndash;&gt;-->
+<!--    <button mat-button>-->
+<!--      <mat-icon>exit_to_app</mat-icon>-->
+<!--      <span>Выход</span>-->
+<!--    </button>-->
+<!--  </mat-list-item>-->
+  <!--  perm_contact_calendar-->
+  <mat-hint></mat-hint>
+</mat-list>
+

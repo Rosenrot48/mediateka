@@ -1,0 +1,17 @@
+<div class="navbar-container">
+<mat-toolbar>
+  <button mat-icon-button aria-label="Меню" (click)="this.sidenavToggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>&nbsp;</span>
+  <h2 (click)="clickRoot()">{{title}}</h2>
+</mat-toolbar>
+  <app-progress-bar [ngStyle]="
+    {
+    'visibility': isLoading ? 'visible' : 'hidden',
+     'width': isLoading ? '4px' : '0'
+     }"></app-progress-bar>
+<div class="breadcrumb" *ngIf="mediatekaView">
+  <mat-card><span class="path" (click)="clickRoot()">Home</span> <span class="path" *ngFor="let path of pathArr" (click)="clickRemove(path)"> / {{path}}</span></mat-card>
+</div>
+</div>

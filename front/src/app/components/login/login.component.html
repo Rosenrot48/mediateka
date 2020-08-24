@@ -1,0 +1,18 @@
+<div class="login-element mat-elevation-z8">
+  <div>
+    <form [formGroup]="loginForm" (submit)="loginUser()">
+      <h1 style="text-align: center; color: brown">Медиатека</h1>
+      <mat-form-field  appearance="outline" class="full-with-field">
+        <mat-label>Имя пользователя:</mat-label>
+        <input matInput placeholder="Имя пользователя" formControlName="username"
+               autocomplete="off" type="text">
+      </mat-form-field>
+      <mat-form-field  appearance="outline"  class="full-with-field">
+        <mat-label>Пароль:</mat-label>
+        <input matInput placeholder="Пароль" formControlName="password"
+               autocomplete="off" type="password">
+      </mat-form-field><br>
+      <button mat-raised-button color="primary" type="submit" [disabled]="this.loginForm.invalid == true">Войти</button>
+    </form>
+  </div>
+</div>

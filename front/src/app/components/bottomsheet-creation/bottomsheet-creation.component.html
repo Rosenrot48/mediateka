@@ -1,0 +1,14 @@
+<mat-nav-list class="sheet-containter">
+  <a mat-list-item (click)="createFolder()">
+    <span mat-line>
+       Создать папку
+    </span>
+  </a>
+  <a mat-list-item>
+    <span mat-line (click)="parser.click()">
+      Загрузить файл
+    </span>
+    <input type="file" style="visibility: hidden" multiple #parser (change)="uploadFiles($event)">
+<!--    <input type="file" style="visibility: hidden" multiple #parser  ng2FileSelect  [uploader]="uploader" (onFileSelected)="uploadFiles($event)">-->
+  </a>
+</mat-nav-list>

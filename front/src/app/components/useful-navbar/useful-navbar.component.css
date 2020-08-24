@@ -1,0 +1,55 @@
+.logo-img {
+  width: 250px;
+  padding: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  background: url('../../../content/images/logo-line.png');
+  background-size: contain;
+}
+.app-toolbar {
+  border: 0;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+}
+.app-toolbar-button {
+  flex-grow: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+::ng-deep .mat-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+}
+.mat-icon-container {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  width: auto;
+}
+.app-card {
+  padding-top: 10px;
+  height: 85px;
+  width: 100px;
+  line-height: 35px;
+  cursor: pointer;
+  transition: background-color 0.1s, border-radius 0.1s;
+}
+.app-card:hover {
+  border-radius: 50%;
+  background-color: #e8e8e8;
+}
+.apps-container + * .cdk-overlay-pane > div.mat-menu-panel {
+  max-width: max-content !important;
+  height: auto;
+}
+.apps-container + * .cdk-overlay-pane > div.mat-menu-panel > div.mat-menu-content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(70px, 1fr));
+  row-gap: 10px;
+}

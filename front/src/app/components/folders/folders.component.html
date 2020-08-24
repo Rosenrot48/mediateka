@@ -1,0 +1,31 @@
+<app-navbar [title]="'Медиатека'"></app-navbar>
+<div *ngIf="state.content === 'folder'" class="content-container">
+  <div *ngFor="let folder of state.folders; let i =index">
+    <app-folder-card [folderName]="folder" (folderClick)="folderClickHandler($event)"></app-folder-card>
+  </div>
+  <app-managers-buttons [path]="state.path" [removes]="state.removes"></app-managers-buttons>
+</div>
+<div *ngIf="state.content === 'video'" class="video-chat">
+  <div  class="video-container">
+    <video controls #videoElement width="100%" height="100%" crossorigin="use-credentials">
+      <source src='{{videoUrl}}' type="video/mp4">
+    </video>
+  </div>
+<!--  <div>-->
+<!--    <div *ngFor="let message of chat">-->
+<!--      <span>{{message.text}}</span>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <mat-form-field appearance="standard" class="input-container">-->
+<!--    <mat-label>Сообщение</mat-label>-->
+<!--    <input matInput type="text" placeholder="Введите свое сообщение" />-->
+<!--    <button color="primary" mat-button matSuffix mat-icon-button aria-label="Send">-->
+<!--      <mat-icon>send</mat-icon>-->
+<!--    </button>-->
+<!--  </mat-form-field>-->
+</div>
+<!--<div>-->
+<!---->
+<!--</div>-->
+<app-pdf-viewer *ngIf="state.content === 'pdf'" [_fileName]="state.path[state.path.length - 1]" [_fileLink]="documentUrl"></app-pdf-viewer>
+<app-txt-viewer *ngIf="state.content === 'txt'" [_fileName]="state.path[state.path.length - 1]" [_fileLink]="documentUrl"></app-txt-viewer>

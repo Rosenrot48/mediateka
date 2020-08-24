@@ -1,0 +1,11 @@
+<div><h1 style="text-align: center; color: brown">{{_fileName}}</h1></div>
+<div>
+  <pdf-viewer
+    [src]="{url: _fileLink, httpHeaders: this.httpHeaders, withCredentials: true}"
+    [render-text]="true"
+    [show-all]="true"
+    style="display: block;"
+    [fit-to-page]="true"
+  >
+  </pdf-viewer>
+</div>

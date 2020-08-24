@@ -1,0 +1,5 @@
+module.exports = {
+    SUCCESS_AUTH: 'SUCCESS_AUTH',
+    FAILED_AUTH: 'FAILED_AUTH',
+    EMPTY_AUTH: 'EMPTY_AUTH'
+}

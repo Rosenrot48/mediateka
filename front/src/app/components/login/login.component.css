@@ -1,0 +1,35 @@
+.example-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  display: block;
+  flex-direction: column;
+  margin-right: 20%;
+  margin-left: 20%;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom:20px;
+  padding-left: 20px;
+}
+
+.login-element {
+  width: 500px;
+  max-width: 90%;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 500;
+  padding: 20px;
+}
+
+.example-container > * {
+  width: 100%;
+}
+.img-logo {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.full-with-field{
+  width: 100%;
+}

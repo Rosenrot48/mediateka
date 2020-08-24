@@ -1,0 +1,17 @@
+<app-navbar [title]="'Задачи'"></app-navbar>
+<form (submit)="createTodo()" class="todos-container">
+  <mat-form-field appearance="outline" class="create-todo-container">
+    <mat-label>Задача</mat-label>
+    <input matInput type="text" [formControl]="todoName">
+    <button mat-icon-button matSuffix matTooltip="Добавить задачу" type="submit"><mat-icon>add</mat-icon></button>
+  </mat-form-field>
+</form>
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  <div class="example-box" *ngFor="let todo of todos" cdkDrag
+       [ngStyle]="{'text-decoration': todo.status === 'done' ? 'line-through' : 'none'}"
+  >
+    <button mat-icon-button matTooltip="Удалить" (click)="removeTodo(todo._id)"><mat-icon>clear</mat-icon></button>
+   <span matTooltip="Изменить статус" style="cursor: pointer" (click)="changeStatus(todo._id)"> {{todo.title}} </span>
+  </div>
+</div>
+<!--<app-calendar></app-calendar>-->

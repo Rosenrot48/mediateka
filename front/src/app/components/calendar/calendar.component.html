@@ -1,0 +1,70 @@
+<app-navbar [title]="'Календарь'"></app-navbar>
+<div class="main-view">
+  <div>
+    <span *ngFor="let day of daysNaming" class="header-column">{{day}}</span>
+  </div>
+<!--  <div class="days-container">-->
+   Monday: <span *ngFor="let monday of mondays"> {{monday}} </span><br/>
+   Tuesday:  <span *ngFor="let tuesday of tuesdays"> {{tuesday}} </span> <br/>
+   Wednesday:  <span *ngFor="let wednesday of wednesdays"> {{wednesday}} </span> <br/>
+   Thursday:  <span *ngFor="let thursday of thursdays"> {{thursday}} </span> <br/>
+   Friday:  <span *ngFor="let friday of fridays"> {{friday}} </span> <br/>
+   Saturday:  <span *ngFor="let saturday of saturdays"> {{saturday}} </span> <br/>
+   Sunday:  <span *ngFor="let sunday of sundays"> {{sunday}} </span> <br/>
+<!--  </div>-->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div>-->
+<!--  <div>-->
+<!--    <ng-container *ngFor="let day of week">{{day}}</ng-container>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<!--<div class="main-view">-->
+<!--  <div>-->
+<!--    <span *ngFor="let day of displayColumns" class="header-column-size">{{day}}</span>-->
+<!--  </div>-->
+<!--  <div class="days-container">-->
+<!--    <span *ngFor="let date of days">{{date}}</span>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div class="main-view">-->
+<!--  <div class="calendar-wrapper">-->
+<!--    <span *ngFor="let day of displayColumns" class="header-column-size">{{day}}</span>-->
+<!--  </div>-->
+<!--  <div class="days-container">-->
+<!--    <span *ngFor="let date of days" class="day-container">{{date}}</span>-->
+<!--  </div>-->
+<!--</div>-->
+<!--  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">-->
+<!--    <ng-container [matColumnDef]="column" *ngFor="let column of displayColumns; let i = index">-->
+<!--      <th mat-header-cell *matHeaderCellDef class="header-column-size" matTooltip="{{column}}">-->
+<!--        {{column}}-->
+<!--      </th>-->
+<!--      <td mat-cell *matCellDef="let element">-->
+<!--        {{element[column]}}-->
+<!--      </td>-->
+<!--    </ng-container>-->
+<!--    <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>-->
+<!--    <tr mat-row *matRowDef="let row; columns: displayColumns; let i = index">{{i}}</tr>-->
+<!--  </table>-->
+<div class="calendar-wrapper">
+  <mat-calendar #calendar [(selected)]="selected">
+  </mat-calendar>
+</div>

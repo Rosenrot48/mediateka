@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+mat-bottom-sheet-container{
+  background-color: #C85D68 !important;
+
+}
+
+mat-calendar {
+}
+
+@media (max-width: 960px){
+  mat-bottom-sheet-container{
+    border-radius: 20px 20px 0 0;
+  }
+}

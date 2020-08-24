@@ -1,0 +1,36 @@
+<mat-toolbar class="app-toolbar mat-elevation-z5">
+  <button mat-icon-button matTooltip="{{getValueByElementCode('sidenav')}}"><mat-icon>menu</mat-icon></button>
+  <span class="logo-img" matTooltip="{{getValueByElementCode('homeLogo')}}" routerLink="/home"></span>
+  <div class="app-toolbar-button">
+    <button  mat-icon-button style="line-height: 25px" *ngIf="currentModel.title" matTooltip="{{getValueByElementCode(currentModel.title)}}">
+      <mat-icon>{{currentModel.iconName}}</mat-icon>
+      <span style="font-size: small;text-align: initial;">{{currentModel.title}}</span>
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="apps" matTooltip="{{getValueByElementCode('apps')}}">
+      <mat-icon>
+        apps
+      </mat-icon>
+      <mat-menu backdropClass="apps-container" #apps="matMenu">
+                <span class="app-card" *ngFor="let application of applications">
+                    <span *ngIf="application.iconName !== 'exit_to_app'" routerLink="{{application.routerLink === 'admin' ? 'admin' : 'home'}}">
+                        <mat-icon class="mat-icon-container">{{application.iconName}}</mat-icon>
+                        <p style="font-size: small;text-align: center; margin: 0" [innerHTML]="application.title | safeHtml"></p>
+                    </span>
+                    <span *ngIf="application.iconName === 'exit_to_app'" (click)="logout()">
+                        <mat-icon class="mat-icon-container">{{application.iconName}}</mat-icon>
+                        <p style="font-size: small;text-align: center; margin: 0" [innerHTML]="application.title | safeHtml"></p>
+                    </span>
+                </span>
+      </mat-menu>
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="person" matTooltip="{{getValueByElementCode('person')}}">
+      <mat-icon>
+        person
+      </mat-icon>
+    </button>
+    <mat-menu #person="matMenu">
+      <span mat-menu-item>Обо мне</span>
+      <span mat-menu-item>Обо всех</span>
+    </mat-menu>
+  </div>
+</mat-toolbar>

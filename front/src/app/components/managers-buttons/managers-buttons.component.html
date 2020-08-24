@@ -1,0 +1,4 @@
+<div class="button-position">
+  <button mat-mini-fab  (click)="openBottomSheet()" style="background-color: #811A24;" matTooltip="Создать"><mat-icon>add</mat-icon></button>
+  <button (click)="removeFolders()" [ngStyle]="{'opacity': removes.length ? '1' : '0'}" mat-mini-fab style="transition: opacity 0.5s; margin-left: 5%; background-color: #811A24;" matTooltip="Больше действий"><mat-icon>more_vert</mat-icon></button>
+</div>

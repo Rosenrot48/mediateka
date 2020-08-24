@@ -1,0 +1,43 @@
+.navbar-container{
+  /*display: grid;*/
+  /*grid-template-rows: 10px;*/
+  /*grid-template-columns: 3fr 1fr;*/
+  position: sticky;
+  position: -webkit-sticky; /* For macOS/iOS Safari */
+  z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+  /*position: fixed;*/
+  top: 0;
+  /*left: 0;*/
+  /*width: 100%;*/
+  /*transition: all .3s ease;*/
+}
+mat-toolbar {
+  color: white;
+  background-color: #5D060E;
+  /*grid-column: 1/4;*/
+  /*grid-row: 1;*/
+}
+.breadcrumb {
+  /*grid-row: 2;*/
+  /*grid-column: 1/4;*/
+  color: white;
+  text-align: center;
+  margin: 1% auto;
+  width: 50%;
+}
+mat-card {
+  top: 20%;
+  background-color: #A43741;
+  color: white;
+  border-radius: 15px
+}
+.path:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+/*.button-position {*/
+/*  top: 20%;*/
+/*  background-color: #e88946;*/
+/*  grid-row: 2;*/
+/*  grid-column: 3/4;*/
+/*}*/

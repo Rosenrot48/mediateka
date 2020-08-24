@@ -1,0 +1,35 @@
+{
+  "name": "fs-worker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app",
+    "start:server": "cross-env NODE_ENV=production node app.js",
+    "front:install": "npm install --prefix front_old",
+    "front:build": "npm build --prefix front_old",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "base64url": "^3.0.1",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.1",
+    "connect-multiparty": "^2.2.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "dotenv": "~8.2.0",
+    "express": "~4.17.1",
+    "express-session": "^1.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "ldap-authentication": "^2.2.1",
+    "mongoose": "^5.9.20",
+    "passport": "^0.4.1",
+    "path": "~0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

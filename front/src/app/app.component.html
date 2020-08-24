@@ -1,0 +1,9 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="{{sidenavMode}}" [autoFocus]="false" [(opened)]="this.isOpened" (closed)="this.sidenavToggle()">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content #content (scroll)="handleScroll($event)">
+    <router-outlet></router-outlet>
+    <button  mat-mini-fab  class="scroll"  color="primary"  *ngIf="isShow" (click)="gotoTop()">	<mat-icon>arrow_upward</mat-icon> </button>
+  </mat-sidenav-content>
+</mat-sidenav-container>

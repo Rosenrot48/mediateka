@@ -1,0 +1,13 @@
+mat-card {
+  border: 2px solid #e8e8ef;
+  border-radius: 10px;
+  color: brown;
+  margin: 0 10px;
+  text-align: center;
+  background-color: bisque;
+  display: flex;
+  justify-content: space-between;
+}
+.checkbox{
+  left: 1%;
+}

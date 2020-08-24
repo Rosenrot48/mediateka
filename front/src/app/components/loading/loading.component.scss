@@ -1,0 +1,9 @@
+.example-margin {
+  display: flex;
+  position: sticky;
+  align-content: center;
+  align-items: center;
+  z-index: 1000;
+  top: 0;
+  transition: height 2ms;
+}
